@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { Alert } from "@/components/bootstrap";
 export const metadata = {
-  title: "Dynamic Fetching method",
+  title: "Incremental Static Regeneration",
 };
 export const revalidate = 15;
 

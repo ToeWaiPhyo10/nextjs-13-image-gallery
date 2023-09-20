@@ -17,12 +17,11 @@ export async function generateStaticParams() {
   return ["health", "fitness", "coding"].map((topic) => ({ topic }));
 }
 
-// export function generateMetaData({ params: { topic } }: PageProps):Metadata{
-//     return{
-//         title:topic+""
-//     }
-
-// };
+export function generateMetadata({ params: { topic } }: PageProps): Metadata {
+  return {
+    title: topic + " - NextJS 13.4 Image Gallery",
+  };
+}
 
 export default async function TopicPage({ params: { topic } }: PageProps) {
   const response = await fetch(

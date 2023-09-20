@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 
 export default function NavBar() {
   const pathname = usePathname();
@@ -33,6 +33,20 @@ export default function NavBar() {
             </Nav.Link>
             <Nav.Link as={Link} href="/isr" active={pathname === "/isr"}>
               ISR
+            </Nav.Link>
+            <NavDropdown title="Topics" id="topics-dropdown">
+              <NavDropdown.Item as={Link} href="/topics/health">
+                Health
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} href="/topics/fitness">
+                Fitness
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} href="/topics/fitness">
+                Coding
+              </NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link as={Link} href="/search" active={pathname === "/isr"}>
+              Search
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
